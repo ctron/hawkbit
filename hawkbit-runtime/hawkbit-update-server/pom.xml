@@ -19,6 +19,10 @@
    <artifactId>hawkbit-update-server</artifactId>
    <name>hawkBit :: Runtime :: Update Server</name>
 
+   <properties>
+      <spring-boot.repackage.layout>JAR</spring-boot.repackage.layout>
+   </properties>
+
    <build>
       <plugins>
          <plugin>
@@ -32,7 +36,7 @@
                   <configuration>
                      <outputDirectory>${baseDir}</outputDirectory>
                      <mainClass>org.eclipse.hawkbit.app.Start</mainClass>
-                     <layout>JAR</layout>
+                     <layout>${spring-boot.repackage.layout}</layout>
                   </configuration>
                </execution>
             </executions>
